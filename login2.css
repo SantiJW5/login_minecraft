@@ -1,0 +1,373 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    animation: fondo 10s ease-in-out infinite;
+    
+}
+
+.wallpaper{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+#wallpaper{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*hace que la imagen encaje perfectamente, usar en caso de ser fondo de pantalla*/
+}
+
+
+
+header{
+    background-color: rgba(15, 14, 20, 0.692);
+    height: 500px;
+    width: 450px;
+    color: white;
+    margin-top: 7%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 5px white;
+    animation: parpadeo1 30s infinite ease-in-out;
+    z-index: 6;
+    transition: 3s ease-in-out;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+
+
+
+
+/*header:hover{
+    margin-left: 50%;
+}*/
+
+@keyframes parpadeo1 {
+    0%{
+        box-shadow: 0px 0px 8px rgb(0, 0, 0);
+    }
+    10%{
+        box-shadow: 0px 0px 8px rgb(0, 110, 255);
+    }
+    20%{
+        box-shadow: 0px 0px 8px rgb(255, 208, 0);
+    }
+    30%{
+        box-shadow: 0px 0px 8px rgb(225, 0, 255);
+    }
+    40%{
+        box-shadow: 0px 0px 8px rgb(109, 35, 230);
+    }
+    50%{
+        box-shadow: 0px 0px 8px rgb(255, 0, 76);
+    }
+    60%{
+        box-shadow: 0px 0px 8px rgb(0, 162, 255);
+    }
+    70%{
+        box-shadow: 0px 0px 8px rgb(255, 196, 3);
+    }
+    80%{
+        box-shadow: 0px 0px 8px rgb(255, 0, 0);
+    }
+    90%{
+        box-shadow: 0px 0px 8px rgb(73, 53, 255);
+    }
+    100%{
+        box-shadow: 0px 0px 8px rgb(0, 0, 0);
+    }
+ }
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 15px;
+}
+
+.password input:active, .username input:active{
+    border: 1px solid red;
+}
+
+.password input, .username input{
+    width: 250px ;
+    height: 35px;
+    border-radius: 30px;
+    background-color: rgba(240, 248, 255, 0.11);
+    border: none;
+    color: white;
+    font-family: monospace;
+    
+}
+
+.username input, .password input{
+    padding: 0px 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.username input:hover, .password input:hover{
+    box-shadow: 0px 0px 5px rgb(0, 132, 240);
+}
+
+
+.username input:focus, .password input:focus{
+    background-color: black;
+    opacity: 0.5;
+    
+}
+
+.password input:focus, .username input:active{
+        overlay: none;
+}
+
+
+    
+    
+
+@keyframes animation2 {
+    0%{
+        color:rgba(255, 255, 255, 0); 
+    }
+
+    50%{
+        color: white;
+    }
+
+    100%{
+        color: rgba(255, 255, 255, 0);
+    }
+}
+
+.username {
+    /*border: 1px solid black;*/
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password {
+    /*border: 1px solid black;*/
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remember{
+    background-color: rgba(255, 0, 0, 0);
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    ;
+}
+
+.remember input{
+    width: 15px;
+    height: 15px;
+    animation: parpadeo 4s ease-in-out infinite;
+    box-shadow: 0px 0px 5px black;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox label{
+    font-family: monospace;
+}
+
+
+@keyframes parpadeo {
+    0%{
+        box-shadow: 0px 0px 8px black;
+    }
+    25%{
+        box-shadow: 0px 0px 8px rgb(0, 131, 218);
+    }
+    50%{
+        box-shadow: 0px 0px 8px black;
+    }
+    75%{
+        box-shadow: 0px 0px 8px rgb(76, 0, 255);
+    }
+    100%{
+        box-shadow: 0px 0px 8px black;
+    }
+ }
+
+ .forgot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .forgot a{
+    color: white;
+    text-decoration-line: none;
+    font-family: monospace;
+    color: rgb(255, 85, 255);
+    text-decoration-line: underline;
+ }
+
+ .forgot a:hover{
+    color: violet;
+ }
+
+
+ .start{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .start a{
+    text-decoration-line: none;
+    background-color: rgb(255, 255, 255);
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-family: monospace;
+    border-radius: 40px;
+    transition: 0.2s ease-in-out;
+ }
+
+ .start a:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.034);
+    border: 1px solid white;
+    
+ }
+
+ .register{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .register h1{
+    font-weight: 100;
+    font-family: monospace;
+    font-size: small;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+ }
+
+ .register a{
+    color: white;
+    text-decoration-line: underline;
+    font-weight: 100;
+    font-family: monospace;
+    font-size: small;
+    margin: 0;
+    color: rgb(255, 66, 255);
+ }
+
+ .register a:hover{
+    color: violet;
+ }
+
+ /*//////////////////////////////////////////////////////////////////*/
+
+.bar{
+    width: 100%;
+    height: 7%;
+    background: rgba(9, 9, 20, 0.575);
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+ }
+
+ .bar2,.bar3,.bar4,.bar5,.bar6{
+    width: 130px;
+    height: 30px;
+ }
+
+.bar2, .bar3, .bar4, .bar5, .bar6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    
+}
+
+.bar a{
+    background-color: black;
+    color:rgb(0, 0, 0);
+    background-color: rgba(15, 15, 20, 0.199);
+    text-decoration-line: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: monospace;
+    border-radius: 30px;
+    transition: 0.2s;
+    text-decoration-line: underline;
+}
+
+.bar a:hover{
+    background-color: white;
+    color: black;
+
+}
+.bar1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+.bar1 img{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    transition: 0.2s;
+}
+
+.bar1 img:hover{
+    width: 50px;
+    height: 50px;
+}
+
